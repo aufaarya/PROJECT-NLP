@@ -1,0 +1,3 @@
+model,metric,model_score,naive_baseline_score
+LinearRegression,RMSE,0.0026286585019551145,0.002590452937681038
+LogisticRegression,Accuracy,0.6301369863013698,0.6602739726027397

@@ -1,0 +1,88 @@
+{
+  "splits": {
+    "train": {
+      "rows": 859,
+      "start": "2021-02-03",
+      "end": "2024-07-09",
+      "up_share": 0.479627473806752
+    },
+    "val": {
+      "rows": 184,
+      "start": "2024-07-10",
+      "end": "2025-04-03",
+      "up_share": 0.5706521739130435
+    },
+    "test": {
+      "rows": 185,
+      "start": "2025-04-04",
+      "end": "2025-12-30",
+      "up_share": 0.4810810810810811
+    }
+  },
+  "arima_order": [
+    3,
+    0,
+    2
+  ],
+  "arimax_exog_set": "news shock z",
+  "classifier_params": {
+    "LogReg|market": {
+      "C": 1.0
+    },
+    "LogReg|market+news": {
+      "C": 1.0
+    },
+    "GBM|market": {
+      "depth": 3,
+      "lr": 0.1,
+      "n_iter": 300
+    },
+    "GBM|market+news": {
+      "depth": 2,
+      "lr": 0.1,
+      "n_iter": 100
+    }
+  },
+  "feature_sets": {
+    "market": [
+      "ret_lag0",
+      "ret_lag1",
+      "ret_lag2",
+      "ret_lag3",
+      "ret_lag4",
+      "vol_5",
+      "vol_20",
+      "mom_5",
+      "mom_20"
+    ],
+    "market+news": [
+      "ret_lag0",
+      "ret_lag1",
+      "ret_lag2",
+      "ret_lag3",
+      "ret_lag4",
+      "vol_5",
+      "vol_20",
+      "mom_5",
+      "mom_20",
+      "log_military_conflict",
+      "log_sanctions",
+      "log_diplomacy",
+      "log_trade_conflict",
+      "log_political_crisis",
+      "log_total_articles",
+      "share_military_conflict",
+      "share_sanctions",
+      "share_diplomacy",
+      "share_trade_conflict",
+      "share_political_crisis",
+      "shock_military_conflict",
+      "shock_sanctions",
+      "shock_diplomacy",
+      "shock_trade_conflict",
+      "shock_political_crisis",
+      "shock_total_articles"
+    ]
+  },
+  "text_topics": null
+}

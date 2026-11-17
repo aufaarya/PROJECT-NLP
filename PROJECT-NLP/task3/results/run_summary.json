@@ -1,0 +1,339 @@
+{
+  "best_representation_by_val": "glove",
+  "rep_val_macroF1": {
+    "w2v": 0.5600371192788254,
+    "glove": 0.5873598824769266,
+    "minilm": 0.5455712451861361,
+    "minilm_ctx": 0.5385909915855469,
+    "finbert": 0.5242744871227843
+  },
+  "best_A": "A|LGBM",
+  "best_B": "B|LGBM",
+  "best_C": "C-glove|LGBM",
+  "mcnemar_test": {
+    "A|LGBM vs C-glove|LGBM": {
+      "p_mcnemar": 0.2806097176983541,
+      "only_first_right": 32,
+      "only_second_right": 23
+    },
+    "B|LGBM vs C-glove|LGBM": {
+      "p_mcnemar": 0.9075606176124984,
+      "only_first_right": 38,
+      "only_second_right": 36
+    },
+    "A|LGBM vs B|LGBM": {
+      "p_mcnemar": 0.46381761789686937,
+      "only_first_right": 37,
+      "only_second_right": 30
+    }
+  },
+  "arima_order": [
+    0,
+    0,
+    2
+  ],
+  "chosen": {
+    "direction|A|LogReg": {
+      "params": {
+        "C": 0.03
+      },
+      "halflife": 0
+    },
+    "direction|B|LogReg": {
+      "params": {
+        "C": 1.0
+      },
+      "halflife": 1
+    },
+    "direction|C-w2v|LogReg": {
+      "params": {
+        "C": 0.01
+      },
+      "halflife": 5
+    },
+    "direction|C-glove|LogReg": {
+      "params": {
+        "C": 0.03
+      },
+      "halflife": 5
+    },
+    "direction|C-minilm|LogReg": {
+      "params": {
+        "C": 0.03
+      },
+      "halflife": 0
+    },
+    "direction|C-minilm_ctx|LogReg": {
+      "params": {
+        "C": 1.0
+      },
+      "halflife": 3
+    },
+    "direction|C-finbert|LogReg": {
+      "params": {
+        "C": 0.1
+      },
+      "halflife": 1
+    },
+    "direction|C-topics|LogReg": {
+      "params": {
+        "C": 0.01
+      },
+      "halflife": 0
+    },
+    "direction|C-entity|LogReg": {
+      "params": {
+        "C": 0.01
+      },
+      "halflife": 0
+    },
+    "direction|A|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.05,
+        "n": 300
+      },
+      "halflife": 0
+    },
+    "direction|B|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.05,
+        "n": 300
+      },
+      "halflife": 1
+    },
+    "direction|C-w2v|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.05,
+        "n": 100
+      },
+      "halflife": 3
+    },
+    "direction|C-glove|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.05,
+        "n": 300
+      },
+      "halflife": 5
+    },
+    "direction|C-minilm|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.05,
+        "n": 300
+      },
+      "halflife": 3
+    },
+    "direction|C-minilm_ctx|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.05,
+        "n": 100
+      },
+      "halflife": 5
+    },
+    "direction|C-finbert|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 5
+    },
+    "direction|C-topics|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.05,
+        "n": 100
+      },
+      "halflife": 0
+    },
+    "direction|C-entity|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.05,
+        "n": 300
+      },
+      "halflife": 0
+    },
+    "direction|C-full|LogReg": {
+      "params": {
+        "C": 0.3
+      },
+      "halflife": 5
+    },
+    "direction|C-full|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 0
+    },
+    "direction|C-late-glove|LogReg": {
+      "halflife": 5,
+      "w_time": 0.0
+    },
+    "direction|T-only-glove|LogReg": {
+      "params": {
+        "C": 1.0
+      },
+      "halflife": 5
+    },
+    "direction|C-attn-minilm|NN": {
+      "epochs": 37
+    },
+    "direction|C-attn-finbert|NN": {
+      "epochs": 33
+    },
+    "volatility|A|LogReg": {
+      "params": {
+        "C": 0.003
+      },
+      "halflife": 0
+    },
+    "volatility|B|LogReg": {
+      "params": {
+        "C": 0.3
+      },
+      "halflife": 0
+    },
+    "volatility|C-glove|LogReg": {
+      "params": {
+        "C": 0.03
+      },
+      "halflife": 0
+    },
+    "volatility|C-entity|LogReg": {
+      "params": {
+        "C": 0.3
+      },
+      "halflife": 5
+    },
+    "volatility|C-full|LogReg": {
+      "params": {
+        "C": 0.01
+      },
+      "halflife": 5
+    },
+    "volatility|A|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 0
+    },
+    "volatility|B|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 0
+    },
+    "volatility|C-glove|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 0
+    },
+    "volatility|C-entity|LGBM": {
+      "params": {
+        "leaves": 8,
+        "lr": 0.02,
+        "n": 300
+      },
+      "halflife": 0
+    },
+    "volatility|C-full|LGBM": {
+      "params": {
+        "leaves": 4,
+        "lr": 0.02,
+        "n": 100
+      },
+      "halflife": 0
+    }
+  },
+  "attention": {
+    "val_curve": [
+      0.42381047360781005,
+      0.39074391540279557,
+      0.3787086966764942,
+      0.37631902170706477,
+      0.37877333284675807,
+      0.37504816491580295,
+      0.3797207443123575,
+      0.3879055896557072,
+      0.3774234689076188,
+      0.3848319258146008,
+      0.3849803160289769,
+      0.3913361056703088,
+      0.4020998940921222,
+      0.3870568478552651,
+      0.41336235069494115,
+      0.42590703419753534,
+      0.4237613955822289,
+      0.4276125978355775,
+      0.4416190348831431,
+      0.4406394048733765,
+      0.4475036629952359,
+      0.4600837019516044,
+      0.48093283099269124,
+      0.4877171494023754,
+      0.48620555580709623,
+      0.5040463484136166,
+      0.5009551856356989,
+      0.508299800564042,
+      0.5125556568260111,
+      0.5049896980123301,
+      0.5075971193496486,
+      0.5070248549708072,
+      0.49882156951485107,
+      0.5035598997785993,
+      0.5082294193341057,
+      0.5084698724331618,
+      0.5110615425306472,
+      0.5133510476656403,
+      0.5048980126341593,
+      0.5142352491113821
+    ]
+  },
+  "rolling_mean": {
+    "A|LGBM": {
+      "Accuracy": 0.5158,
+      "MacroF1": 0.4938,
+      "MCC": 0.0159
+    },
+    "A|LogReg": {
+      "Accuracy": 0.5581,
+      "MacroF1": 0.4511,
+      "MCC": 0.0508
+    },
+    "B|LGBM": {
+      "Accuracy": 0.5211,
+      "MacroF1": 0.5027,
+      "MCC": 0.0348
+    },
+    "B|LogReg": {
+      "Accuracy": 0.5243,
+      "MacroF1": 0.4818,
+      "MCC": 0.0161
+    },
+    "C-glove|LGBM": {
+      "Accuracy": 0.524,
+      "MacroF1": 0.5124,
+      "MCC": 0.0858
+    },
+    "C-glove|LogReg": {
+      "Accuracy": 0.5383,
+      "MacroF1": 0.494,
+      "MCC": 0.0525
+    }
+  }
+}

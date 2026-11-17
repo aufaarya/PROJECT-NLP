@@ -1,0 +1,12 @@
+{
+  "articles_with_headline":1063845,
+  "aligned_unique_per_day":1048778,
+  "corpus_rows":71520,
+  "days_covered":1192,
+  "median_per_day":60.0,
+  "align_reasons":{
+    "same_day_before_cutoff":464414,
+    "after_cutoff":295976,
+    "weekend_or_holiday":288388
+  }
+}

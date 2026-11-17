@@ -1,0 +1,5 @@
+# large intermediates (rebuilt by src.news_corpus / src.build_features)
+data/interim/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

@@ -1,0 +1,105 @@
+{
+ "embedding_space": {
+  "knn15_highlow_acc": 0.526,
+  "rep": "minilm",
+  "map": "UMAP"
+ },
+ "importance": {
+  "model": "C-glove|LGBM",
+  "base_auc": 0.544724919093851
+ },
+ "top_topic_correlations": [
+  {
+   "feature": "clu_0",
+   "rho_absret": 0.0943,
+   "p_absret": 0.0028,
+   "terms": "gaza israel israeli hamas palestinian palestinians"
+  },
+  {
+   "feature": "ent_middle_east_shock",
+   "rho_absret": -0.0822,
+   "p_absret": 0.0092,
+   "terms": ""
+  },
+  {
+   "feature": "finbert_anchor_em_stress",
+   "rho_absret": -0.0773,
+   "p_absret": 0.0143,
+   "terms": ""
+  },
+  {
+   "feature": "finbert_anchor_sanctions_trade",
+   "rho_absret": -0.0732,
+   "p_absret": 0.0204,
+   "terms": ""
+  },
+  {
+   "feature": "ent_russia_ukraine_shock",
+   "rho_absret": -0.0695,
+   "p_absret": 0.0278,
+   "terms": ""
+  },
+  {
+   "feature": "lda_8",
+   "rho_absret": -0.0647,
+   "p_absret": 0.0404,
+   "terms": "house trump congress white bjp elections"
+  },
+  {
+   "feature": "finbert_anchor_energy",
+   "rho_absret": -0.0645,
+   "p_absret": 0.0413,
+   "terms": ""
+  },
+  {
+   "feature": "lda_6",
+   "rho_absret": 0.0641,
+   "p_absret": 0.0424,
+   "terms": "israel gaza killed hamas israeli strike"
+  },
+  {
+   "feature": "finbert_anchor_china_taiwan",
+   "rho_absret": 0.0633,
+   "p_absret": 0.0451,
+   "terms": ""
+  },
+  {
+   "feature": "ent_us_shock",
+   "rho_absret": -0.0565,
+   "p_absret": 0.0734,
+   "terms": ""
+  }
+ ],
+ "error_analysis": {
+  "cases": {
+   "both right": 66,
+   "both wrong": 57,
+   "text hurt": 32,
+   "text helped": 23
+  },
+  "by_novelty": {
+   "a_ok": {
+    "low": 0.6,
+    "mid": 0.542,
+    "high": 0.508
+   },
+   "c_ok": {
+    "low": 0.517,
+    "mid": 0.525,
+    "high": 0.458
+   }
+  },
+  "by_move": {
+   "a_ok": {
+    "small": 0.533,
+    "mid": 0.593,
+    "large": 0.525
+   },
+   "c_ok": {
+    "small": 0.4,
+    "mid": 0.627,
+    "large": 0.475
+   }
+  }
+ }
+}

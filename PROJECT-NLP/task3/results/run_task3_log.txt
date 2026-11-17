@@ -1,0 +1,129 @@
+  A             LogReg h=0  val F1 0.490
+  B             LogReg h=1  val F1 0.525
+  C-w2v         LogReg h=5  val F1 0.560
+  C-glove       LogReg h=5  val F1 0.525
+  C-minilm      LogReg h=0  val F1 0.520
+  C-minilm_ctx  LogReg h=3  val F1 0.536
+  C-finbert     LogReg h=1  val F1 0.485
+  C-topics      LogReg h=0  val F1 0.562
+  C-entity      LogReg h=0  val F1 0.534
+  A             LGBM   h=0  val F1 0.536
+  B             LGBM   h=1  val F1 0.545
+  C-w2v         LGBM   h=3  val F1 0.553
+  C-glove       LGBM   h=5  val F1 0.587
+  C-minilm      LGBM   h=3  val F1 0.546
+  C-minilm_ctx  LGBM   h=5  val F1 0.539
+  C-finbert     LGBM   h=5  val F1 0.524
+  C-topics      LGBM   h=0  val F1 0.577
+  C-entity      LGBM   h=0  val F1 0.544
+  attention fusion minilm: epochs 37
+  attention fusion finbert: epochs 33
+
+=== DIRECTION / VAL ===
+            model_id    fusion  halflife  Accuracy  MacroF1    MCC   AUC  p_binom(acc>0.5)
+           Majority         -         0     0.520    0.342  0.000   NaN             0.326
+        Persistence         -         0     0.514    0.513  0.027   NaN             0.382
+           A|LogReg         -         0     0.565    0.490  0.148 0.501             0.049
+           B|LogReg     early         1     0.525    0.525  0.054 0.533             0.274
+       C-w2v|LogReg     early         5     0.576    0.560  0.148 0.530             0.025
+     C-glove|LogReg     early         5     0.531    0.525  0.056 0.513             0.226
+    C-minilm|LogReg     early         0     0.542    0.520  0.075 0.519             0.146
+C-minilm_ctx|LogReg     early         3     0.537    0.536  0.071 0.504             0.184
+   C-finbert|LogReg     early         1     0.520    0.485  0.023 0.452             0.326
+    C-topics|LogReg     early         0     0.576    0.562  0.148 0.534             0.025
+    C-entity|LogReg     early         0     0.548    0.534  0.088 0.523             0.115
+             A|LGBM         -         0     0.548    0.536  0.088 0.536             0.115
+             B|LGBM     early         1     0.554    0.545  0.101 0.539             0.088
+         C-w2v|LGBM     early         3     0.571    0.553  0.136 0.546             0.035
+       C-glove|LGBM     early         5     0.588    0.587  0.179 0.604             0.012
+      C-minilm|LGBM     early         3     0.548    0.546  0.092 0.537             0.115
+  C-minilm_ctx|LGBM     early         5     0.554    0.539  0.100 0.508             0.088
+     C-finbert|LGBM     early         5     0.554    0.524  0.100 0.550             0.088
+      C-topics|LGBM     early         0     0.588    0.577  0.171 0.559             0.012
+      C-entity|LGBM     early         0     0.554    0.544  0.101 0.555             0.088
+      C-full|LogReg     early         5     0.565    0.564  0.128 0.520             0.049
+        C-full|LGBM     early         0     0.576    0.556  0.149 0.529             0.025
+C-late-glove|LogReg      late         5     0.537    0.531  0.068 0.518             0.184
+T-only-glove|LogReg         -         5     0.537    0.531  0.068 0.518             0.184
+   C-attn-minilm|NN attention         0     0.492    0.491 -0.018 0.520             0.618
+  C-attn-finbert|NN attention         0     0.537    0.536  0.073 0.539             0.184
+
+=== DIRECTION / TEST ===
+            model_id    fusion  halflife  Accuracy  MacroF1    MCC   AUC  p_binom(acc>0.5)
+           Majority         -         0     0.579    0.367  0.000   NaN             0.021
+        Persistence         -         0     0.545    0.533  0.065   NaN             0.130
+           A|LogReg         -         0     0.579    0.454  0.053 0.542             0.021
+           B|LogReg     early         1     0.478    0.477 -0.026 0.487             0.750
+       C-w2v|LogReg     early         5     0.455    0.383  0.080 0.591             0.899
+     C-glove|LogReg     early         5     0.545    0.544  0.104 0.553             0.130
+    C-minilm|LogReg     early         0     0.562    0.517  0.060 0.534             0.058
+C-minilm_ctx|LogReg     early         3     0.528    0.514  0.156 0.579             0.250
+   C-finbert|LogReg     early         1     0.545    0.484  0.008 0.503             0.130
+    C-topics|LogReg     early         0     0.489    0.477 -0.047 0.502             0.646
+    C-entity|LogReg     early         0     0.567    0.514  0.065 0.547             0.042
+             A|LGBM         -         0     0.551    0.531  0.065 0.505             0.101
+             B|LGBM     early         1     0.511    0.501  0.003 0.507             0.411
+         C-w2v|LGBM     early         3     0.494    0.487  0.058 0.535             0.589
+       C-glove|LGBM     early         5     0.500    0.499  0.013 0.545             0.530
+      C-minilm|LGBM     early         3     0.489    0.489  0.004 0.514             0.646
+  C-minilm_ctx|LGBM     early         5     0.522    0.521  0.090 0.574             0.300
+     C-finbert|LGBM     early         5     0.556    0.505  0.042 0.543             0.077
+      C-topics|LGBM     early         0     0.472    0.456 -0.087 0.455             0.795
+      C-entity|LGBM     early         0     0.500    0.488 -0.024 0.490             0.530
+      C-full|LogReg     early         5     0.534    0.505  0.017 0.518             0.205
+        C-full|LGBM     early         0     0.500    0.455 -0.073 0.455             0.530
+C-late-glove|LogReg      late         5     0.449    0.398  0.023 0.480             0.923
+T-only-glove|LogReg         -         5     0.449    0.398  0.023 0.480             0.923
+   C-attn-minilm|NN attention         0     0.494    0.494  0.021 0.508             0.589
+  C-attn-finbert|NN attention         0     0.522    0.519  0.044 0.534             0.300
+
+=== VOLATILITY / TEST ===
+        model_id fusion  halflife  Accuracy  MacroF1   MCC   AUC  p_binom(acc>0.5)
+       A|LogReg      -         0     0.522    0.493 0.033 0.586             0.300
+       B|LogReg  early         0     0.539    0.461 0.079 0.539             0.165
+ C-glove|LogReg  early         0     0.551    0.515 0.098 0.601             0.101
+C-entity|LogReg  early         5     0.517    0.341 0.000 0.468             0.354
+  C-full|LogReg  early         5     0.517    0.361 0.005 0.527             0.354
+         A|LGBM      -         0     0.528    0.523 0.051 0.562             0.250
+         B|LGBM  early         0     0.567    0.525 0.140 0.621             0.042
+   C-glove|LGBM  early         0     0.506    0.491 0.001 0.549             0.470
+  C-entity|LGBM  early         0     0.607    0.603 0.211 0.612             0.003
+    C-full|LGBM  early         0     0.584    0.549 0.178 0.615             0.015
+
+=== REGRESSION ===
+ split                                 model family  RMSE_bp  MAE_bp  DirAcc
+  val                        RandomWalk (0)  naive   33.757  24.615     NaN
+ test                        RandomWalk (0)  naive   29.187  22.164     NaN
+  val                        ARIMA(0, 0, 2)      A   33.725  24.978   0.503
+ test                        ARIMA(0, 0, 2)      A   28.948  21.967   0.551
+  val        ARIMAX(0, 0, 2) lexicon shocks      B   33.721  25.114   0.497
+ test        ARIMAX(0, 0, 2) lexicon shocks      B   29.157  22.275   0.522
+  val ARIMAX(0, 0, 2) glove anchors+novelty      C   34.370  25.551   0.542
+ test ARIMAX(0, 0, 2) glove anchors+novelty      C   29.303  22.121   0.517
+
+best: A|LGBM B|LGBM C-glove|LGBM 
+ {
+ "A|LGBM vs C-glove|LGBM": {
+  "p_mcnemar": 0.2806097176983541,
+  "only_first_right": 32,
+  "only_second_right": 23
+ },
+ "B|LGBM vs C-glove|LGBM": {
+  "p_mcnemar": 0.9075606176124984,
+  "only_first_right": 38,
+  "only_second_right": 36
+ },
+ "A|LGBM vs B|LGBM": {
+  "p_mcnemar": 0.46381761789686937,
+  "only_first_right": 37,
+  "only_second_right": 30
+ }
+}
+                Accuracy  MacroF1    MCC
+model_id                                
+A|LGBM             0.516    0.494  0.016
+A|LogReg           0.558    0.451  0.051
+B|LGBM             0.521    0.503  0.035
+B|LogReg           0.524    0.482  0.016
+C-glove|LGBM       0.524    0.512  0.086
+C-glove|LogReg     0.538    0.494  0.053
